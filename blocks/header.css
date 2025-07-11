@@ -1,12 +1,13 @@
 .header {
-  background-color: gray;
+  width: 100%;
+  max-width: 880px;
+  margin: auto;
 }
 
 .header__logo-container {
   width: 880px;
   height: 74px;
   background-color: black;
-  margin: 0 200px 0 200px;
   padding-top: 45px;
   border-bottom: 1px solid lightgray;
 }
