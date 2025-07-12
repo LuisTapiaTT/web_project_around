@@ -161,6 +161,16 @@
     height: 50px;
   }
 
+  .feed {
+    width: 100%;
+    max-width: 880px;
+    margin: auto;
+    padding-top: 36px;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+  }
+
   .feed__posts {
     display: flex;
     justify-content: center;
@@ -180,7 +190,7 @@
     line-height: 100%;
     letter-spacing: 0%;
     color: #545454;
-    padding: 50px 19px;
+    padding: 50px 19px 36px;
     margin: 0;
   }
 }
