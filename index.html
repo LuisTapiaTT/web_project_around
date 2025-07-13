@@ -152,7 +152,45 @@
         <footer class="footer">
           <p class="footer__text">© 2024 Around The U.S.</p>
         </footer>
+
+        <div class="popupWindow">
+          <div class="popupWindow__overlay"></div>
+          <button type="button" class="popupWindow__closeButton">
+            <img
+              src="./images/Close Icon.png"
+              alt="botón de cerrar ventana"
+              class="popupWindow__closeButton-img"
+            />
+          </button>
+          <div class="popupWindow__container">
+            <form class="popupWindow__form">
+              <h2 class="popupWindow__title">Editar Perfil</h2>
+
+              <input
+                type="text"
+                class="popupWindow__form__input popupWindow__form-fields__input-name"
+                id="name"
+                name="name"
+                placeholder="Nombre"
+                required
+              />
+
+              <input
+                type="text"
+                class="popupWindow__form__input popupWindow__form-fields__input-AcercaDeMi"
+                id="acerca-de-mi"
+                name="AcercaDeMi"
+                placeholder="Acerca de mí"
+              />
+
+              <button type="button" class="popupWindow__saveButton">
+                Guardar
+              </button>
+            </form>
+          </div>
+        </div>
       </main>
     </div>
+    <script src="./vendor/script.js"></script>
   </body>
 </html>

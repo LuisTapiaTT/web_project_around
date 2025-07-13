@@ -1,0 +1,92 @@
+.popupWindow {
+  /*display: none;*/
+  width: 100vw;
+  height: 100vh;
+  background-color: palegreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popupWindow__overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+}
+
+.popupWindow__container {
+  width: 430px;
+  height: 330px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  margin: 50% auto;
+  border-radius: 8px;
+}
+
+.popupWindow__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 34px 36px 36px 35px;
+  width: 430px;
+  height: 330px;
+  border: 1px solid green;
+  box-sizing: border-box;
+}
+
+.popupWindow__title {
+  margin: 0 0 54px 0;
+}
+
+.popupWindow__form__input {
+  max-width: 100%;
+  width: 358px;
+  max-height: 100%;
+  height: 28px;
+  margin-bottom: 29px;
+  padding: 10px;
+  box-sizing: border-box; /* Para que los inputs quepan en el contenedor del form */
+  border: 0;
+  border-bottom: 1px solid #c4c4c4;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.form__input:focus {
+  outline: none;
+  border-color: #3498db; /* Borde azul al enfocar el campo */
+}
+
+.popupWindow__saveButton {
+  text-align: center;
+  width: 358px;
+  height: 50px;
+  margin: 0;
+  border: 1px solid #c4c4c4;
+  color: #c4c4c4;
+  background: none;
+  font-size: 18px;
+  border-radius: 4px;
+  margin-top: 19px;
+}
+
+.popupWindow__handlers-saveButton:focus {
+  outline: none;
+  border-color: #3498db; /* Borde azul al enfocar el campo */
+}
+
+.popupWindow__closeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  /* position: absolute;
+  top: ;
+  left: ; */
+  border: 1px solid red;
+}

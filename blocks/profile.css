@@ -100,7 +100,7 @@
   background: none;
   border: none;
   padding: 0;
-  cursor: pointer;
+  cursor: pointer; /* Para que podamos seleccionarlo */
   width: 100%;
   max-width: 24px;
   height: 24px;
