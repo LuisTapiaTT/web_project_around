@@ -58,8 +58,18 @@
   padding: 0 15px;
 }
 
-.feed__post-like {
+.feed__post-likeButton {
+  background-image: url(../images/like_button.png) no-repeat center;
   padding: 0 15px;
   background: none;
   border: none;
+  cursor: pointer;
+}
+
+.feed__post-likeButton:hover {
+  opacity: 0.5;
+}
+
+.feed__post-likeButton-active {
+  background-image: url(../images/photo__like.png) no-repeat center;
 }

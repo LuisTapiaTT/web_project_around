@@ -126,7 +126,7 @@
     width: 120px;
   }
 
-  .profile__edit-button {
+  .profile__editButton {
     margin: 0px;
     background: none;
     border: none;
@@ -138,7 +138,7 @@
     margin: 0;
   }
 
-  .profile__edit-button-img {
+  .profile__editButton-img {
     width: 18px;
   }
 
@@ -192,5 +192,103 @@
     color: #545454;
     padding: 50px 19px 36px;
     margin: 0;
+  }
+
+  .popupWindow {
+    /*display: none;*/
+    width: 100vw;
+    height: 100vh;
+    background-color: palegreen;
+  }
+
+  .popupWindow__container {
+    width: 282px;
+    height: 322px;
+    background-color: #ffffff;
+    /* border: 1px solid black; */
+    border-radius: 8px;
+    position: relative;
+    top: 123px;
+    left: 19px;
+  }
+
+  .popupWindow__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 34px 22px 36px 22px;
+    width: 282px;
+    height: 322px;
+    border: 1px solid green;
+    box-sizing: border-box;
+  }
+
+  .popupWindow__title {
+    margin: 0 0 54px 0;
+  }
+
+  .popupWindow__form__input {
+    max-width: 100%;
+    width: 238px;
+    max-height: 100%;
+    height: 26px;
+    margin-bottom: 29px;
+    padding: 10px;
+    box-sizing: border-box; /* Para que los inputs quepan en el contenedor del form */
+    border: 0;
+    border-bottom: 1px solid #c4c4c4;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+
+  .form__input:focus {
+    outline: none;
+    border-color: #3498db; /* Borde azul al enfocar el campo */
+  }
+
+  .popupWindow__saveButton {
+    text-align: center;
+    width: 238px;
+    height: 46px;
+    margin: 0;
+    border: 1px solid #c4c4c4;
+    color: #ffffff;
+    background-color: #000000;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-top: 19px;
+    cursor: pointer;
+  }
+
+  .popupWindow__saveButton:hover {
+    background-color: #000000cc;
+  }
+
+  .popupWindow__saveButton-disabled {
+    background-color: #f1f1f1;
+    cursor: default;
+  }
+
+  .popupWindow__handlers-saveButton:focus {
+    outline: none;
+    border-color: #3498db; /* Borde azul al enfocar el campo */
+  }
+
+  .popupWindow__closeButton {
+    background-image: url(../images/CloseIcon.png) no-repeat center;
+    background-color: #000000;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: 115px;
+    left: 255px;
+  }
+
+  .popupWindow__closeButton:hover {
+    background-color: #000000cc;
   }
 }

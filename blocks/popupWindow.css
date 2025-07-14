@@ -3,9 +3,6 @@
   width: 100vw;
   height: 100vh;
   background-color: palegreen;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .popupWindow__overlay {
@@ -19,9 +16,11 @@
   width: 430px;
   height: 330px;
   background-color: #ffffff;
-  border: 1px solid black;
-  margin: 50% auto;
+  /* border: 1px solid black; */
   border-radius: 8px;
+  position: relative;
+  top: 195px;
+  left: 425px;
 }
 
 .popupWindow__form {
@@ -67,11 +66,21 @@
   height: 50px;
   margin: 0;
   border: 1px solid #c4c4c4;
-  color: #c4c4c4;
-  background: none;
+  color: #ffffff;
+  background-color: #000000;
   font-size: 18px;
   border-radius: 4px;
   margin-top: 19px;
+  cursor: pointer;
+}
+
+.popupWindow__saveButton:hover {
+  background-color: #000000cc;
+}
+
+.popupWindow__saveButton-disabled {
+  background-color: #f1f1f1;
+  cursor: default;
 }
 
 .popupWindow__handlers-saveButton:focus {
@@ -80,13 +89,17 @@
 }
 
 .popupWindow__closeButton {
-  background: none;
+  background-image: url(../images/CloseIcon.png) no-repeat center;
+  background-color: #000000;
   border: none;
   cursor: pointer;
   width: 40px;
   height: 40px;
-  /* position: absolute;
-  top: ;
-  left: ; */
-  border: 1px solid red;
+  position: relative;
+  top: 196.76px;
+  left: 850px;
+}
+
+.popupWindow__closeButton:hover {
+  background-color: #000000cc;
 }
