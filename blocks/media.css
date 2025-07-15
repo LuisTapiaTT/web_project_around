@@ -108,7 +108,7 @@
     color: white;
   }
 
-  .profile__hobbie {
+  .profile__hobby {
     font-family: "Inter", Arial, sans-serif;
     font-size: 14px;
     font-weight: 400;
@@ -229,7 +229,7 @@
     margin: 0 0 54px 0;
   }
 
-  .popupWindow__form__input {
+  .popupWindow__input {
     max-width: 100%;
     width: 238px;
     max-height: 100%;

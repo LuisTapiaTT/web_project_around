@@ -47,7 +47,7 @@
                   />
                 </button>
               </div>
-              <p class="profile__hobbie">Explorador</p>
+              <p class="profile__hobby">Explorador</p>
             </div>
           </div>
 
@@ -148,34 +148,31 @@
 
         <div class="popupWindow">
           <div class="popupWindow__overlay"></div>
-          <button type="button" class="popupWindow__closeButton">
-            <img
-              src="./images/CloseIcon.png"
-              alt="botón de cerrar ventana"
-              class="popupWindow__closeButton-img"
-            />
-          </button>
+          <img
+            src="./images/CloseIcon.png"
+            alt="botón de cerrar ventana"
+            class="popupWindow__closeButton"
+          />
           <div class="popupWindow__container">
             <form class="popupWindow__form">
               <h2 class="popupWindow__title">Editar Perfil</h2>
+              <div class="popupWindow__formInputContainer">
+                <input
+                  type="text"
+                  class="popupWindow__input popupWindow__inputName"
+                  id="name"
+                  name="name"
+                  placeholder="Nombre"
+                />
 
-              <input
-                type="text"
-                class="popupWindow__form__input popupWindow__form-fields__input-name"
-                id="name"
-                name="name"
-                placeholder="Nombre"
-                required
-              />
-
-              <input
-                type="text"
-                class="popupWindow__form__input popupWindow__form-fields__input-AcercaDeMi"
-                id="acerca-de-mi"
-                name="AcercaDeMi"
-                placeholder="Acerca de mí"
-              />
-
+                <input
+                  type="text"
+                  class="popupWindow__input popupWindow__inputHobby"
+                  id="acerca-de-mi"
+                  name="AcercaDeMi"
+                  placeholder="Acerca de mí"
+                />
+              </div>
               <button type="button" class="popupWindow__saveButton">
                 Guardar
               </button>
