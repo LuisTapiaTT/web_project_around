@@ -207,7 +207,7 @@
     background-color: #ffffff;
     /* border: 1px solid black; */
     border-radius: 8px;
-    position: relative;
+    position: absolute;
     top: 123px;
     left: 19px;
   }
@@ -221,7 +221,7 @@
     padding: 34px 22px 36px 22px;
     width: 282px;
     height: 322px;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     box-sizing: border-box;
   }
 
@@ -278,14 +278,13 @@
 
   .popupWindow__closeButton {
     background-image: url(../images/CloseIcon.png) no-repeat center;
-    background-color: #000000;
     border: none;
     cursor: pointer;
-    width: 40px;
-    height: 40px;
-    position: relative;
-    top: 115px;
-    left: 255px;
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    top: 80px;
+    left: 270px;
     z-index: 2; /* Asegura que el botón esté por encima de la imagen */
   }
 
