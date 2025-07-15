@@ -194,14 +194,14 @@
     margin: 0;
   }
 
-  .popupWindow {
+  .popup {
     /*display: none;*/
     width: 100vw;
     height: 100vh;
     background-color: palegreen;
   }
 
-  .popupWindow__container {
+  .popup__container {
     width: 282px;
     height: 322px;
     background-color: #ffffff;
@@ -212,7 +212,7 @@
     left: 19px;
   }
 
-  .popupWindow__form {
+  .popup__form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -225,11 +225,11 @@
     box-sizing: border-box;
   }
 
-  .popupWindow__title {
+  .popup__title {
     margin: 0 0 54px 0;
   }
 
-  .popupWindow__input {
+  .popup__input {
     max-width: 100%;
     width: 238px;
     max-height: 100%;
@@ -248,7 +248,7 @@
     border-color: #3498db; /* Borde azul al enfocar el campo */
   }
 
-  .popupWindow__saveButton {
+  .popup__saveButton {
     text-align: center;
     width: 238px;
     height: 46px;
@@ -262,21 +262,16 @@
     cursor: pointer;
   }
 
-  .popupWindow__saveButton:hover {
+  .popup__saveButton:hover {
     background-color: #000000cc;
   }
 
-  .popupWindow__saveButton-disabled {
+  .popup__saveButton-disabled {
     background-color: #f1f1f1;
     cursor: default;
   }
 
-  .popupWindow__handlers-saveButton:focus {
-    outline: none;
-    border-color: #3498db; /* Borde azul al enfocar el campo */
-  }
-
-  .popupWindow__closeButton {
+  .popup__closeButton {
     background-image: url(../images/CloseIcon.png) no-repeat center;
     border: none;
     cursor: pointer;
@@ -288,7 +283,7 @@
     z-index: 2; /* Asegura que el botón esté por encima de la imagen */
   }
 
-  .popupWindow__closeButton:hover {
+  .popup__closeButton:hover {
     background-color: #000000cc;
   }
 }

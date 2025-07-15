@@ -1,8 +1,8 @@
-.popupWindow {
+.popup {
   display: none;
 }
 
-.popupWindow__overlay {
+.popup__overlay {
   background-color: rgba(0, 0, 0, 0.5); /* Opacidad inicial */
   transition: background-color 0.3s ease; /* Animación suave */
   position: fixed; /* Asegura que el overlay cubra toda la pantalla */
@@ -12,11 +12,11 @@
   height: 100%;
 }
 
-.popupWindow-display {
+.popup_opened {
   display: contents;
 }
 
-.popupWindow__container {
+.popup__container {
   width: 430px;
   height: 330px;
   background-color: #ffffff;
@@ -27,7 +27,7 @@
   left: 425px;
 }
 
-.popupWindow__form {
+.popup__form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -41,11 +41,11 @@
   box-sizing: border-box;
 }
 
-.popupWindow__title {
+.popup__title {
   margin: 0 0 54px 0;
 }
 
-.popupWindow__input {
+.popup__input {
   max-width: 100%;
   width: 358px;
   max-height: 100%;
@@ -59,12 +59,12 @@
   font-size: 14px;
 }
 
-.form__input:focus {
+.popup__input:focus {
   outline: none;
   border-color: #3498db; /* Borde azul al enfocar el campo */
 }
 
-.popupWindow__saveButton {
+.popup__saveButton {
   text-align: center;
   width: 358px;
   height: 50px;
@@ -78,16 +78,11 @@
   cursor: pointer;
 }
 
-.popupWindow__saveButton:hover {
+.popup__saveButton:hover {
   background-color: #000000cc;
 }
 
-.popupWindow__handlers-saveButton:focus {
-  outline: none;
-  border-color: #3498db; /* Borde azul al enfocar el campo */
-}
-
-.popupWindow__closeButton {
+.popup__closeButton {
   background-color: none;
   border: none;
   cursor: pointer;
@@ -100,6 +95,6 @@
   z-index: 2; /* Asegura que el botón esté por encima de la imagen */
 }
 
-.popupWindow__closeButton:hover {
+.popup__closeButton:hover {
   opacity: 0.5;
 }

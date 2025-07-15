@@ -1,21 +1,16 @@
-console.log("Esto es una prueba");
-console.log(`Esto es una
-plantilla literal,
-y no deberia haber un problema con ella; verdad, numero ${8 + 1}?`);
-
 let profileEditButton = document.querySelector(".profile__editButton"); // Botón editar perfil.
 
-let profileSaveButton = document.querySelector(".popupWindow__saveButton"); // Botón de guardar editar perfil.
+let profileSaveButton = document.querySelector(".popup__saveButton"); // Botón de guardar editar perfil.
 
-let profileCloseButton = document.querySelector(".popupWindow__closeButton"); // Botón de cerrar popup.
+let profileCloseButton = document.querySelector(".popup__closeButton"); // Botón de cerrar popup.
 
 let profileLikeButton = document.querySelector(".feed__post-likeButton"); //Botón de like.
 
-let popupWindow = document.querySelector(".popupWindow"); //Ventana popup.
+let popupWindow = document.querySelector(".popup"); //Ventana popup.
 
-let inputName = document.querySelector(".popupWindow__inputName");
+let inputName = document.querySelector(".popup__inputName");
 
-let inputHobby = document.querySelector(".popupWindow__inputHobby");
+let inputHobby = document.querySelector(".popup__inputHobby");
 
 let infoName = document.querySelector(".profile__name");
 
@@ -24,7 +19,7 @@ let infoHobby = document.querySelector(".profile__hobby");
 // Botón editar perfil/abrir popup.
 
 function openPopupWindow() {
-  popupWindow.classList.add("popupWindow-display");
+  popupWindow.classList.add("popup_opened");
   inputName.value = infoName.textContent;
   inputHobby.value = infoHobby.textContent;
 }
@@ -33,7 +28,7 @@ profileEditButton.addEventListener("click", openPopupWindow);
 // Botón cerrar popup.
 
 function closePopupWindow() {
-  popupWindow.classList.remove("popupWindow-display");
+  popupWindow.classList.remove("popup_opened");
 }
 profileCloseButton.addEventListener("click", closePopupWindow);
 
