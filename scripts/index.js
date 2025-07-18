@@ -1,20 +1,20 @@
-let profileEditButton = document.querySelector(".profile__editButton"); // Botón editar perfil.
+const profileEditButton = document.querySelector(".profile__editButton"); // Botón editar perfil.
 
-let profileSaveButton = document.querySelector(".popup__saveButton"); // Botón de guardar editar perfil.
+const profileSaveButton = document.querySelector(".popup__saveButton"); // Botón de guardar editar perfil.
 
-let profileCloseButton = document.querySelector(".popup__closeButton"); // Botón de cerrar popup.
+const profileCloseButton = document.querySelector(".popup__closeButton"); // Botón de cerrar popup.
 
 let profileLikeButton = document.querySelector(".feed__post-likeButton"); //Botón de like.
 
 let popupWindow = document.querySelector(".popup"); //Ventana popup.
 
-let inputName = document.querySelector(".popup__inputName");
+const inputName = document.querySelector(".popup__inputName");
 
-let inputHobby = document.querySelector(".popup__inputHobby");
+const inputHobby = document.querySelector(".popup__inputHobby");
 
-let infoName = document.querySelector(".profile__name");
+const infoName = document.querySelector(".profile__name");
 
-let infoHobby = document.querySelector(".profile__hobby");
+const infoHobby = document.querySelector(".profile__hobby");
 
 // Botón editar perfil/abrir popup.
 
