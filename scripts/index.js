@@ -16,6 +16,8 @@ const infoName = document.querySelector(".profile__name");
 
 const infoHobby = document.querySelector(".profile__hobby");
 
+const profileAddButton = document.querySelector(".profile__add-button"); //Botón de agregar post.
+
 // Botón editar perfil/abrir popup.
 
 function openPopupWindow() {
