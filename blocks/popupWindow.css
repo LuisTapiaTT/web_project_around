@@ -98,3 +98,106 @@
 .popup__closeButton:hover {
   opacity: 0.5;
 }
+
+/* ----------------------------------------- Segundo Popup --------------------------------- */
+
+.popup-2 {
+  display: none;
+}
+
+.popup__overlay-2 {
+  background-color: rgba(0, 0, 0, 0.5); /* Opacidad inicial */
+  transition: background-color 0.3s ease; /* Animación suave */
+  position: fixed; /* Asegura que el overlay cubra toda la pantalla */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.popup_opened-2 {
+  display: contents;
+}
+
+.popup__container-2 {
+  max-width: 430px;
+  max-height: 330px;
+  background-color: #ffffff;
+  /* border: 1px solid black; */
+  border-radius: 8px;
+  position: absolute;
+  top: 195px;
+  left: 425px;
+}
+
+.popup__form-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 34px 36px 36px 35px;
+  width: 430px;
+  height: 330px;
+  /* border: 1px solid green; */
+  box-sizing: border-box;
+}
+
+.popup__title-2 {
+  margin: 0 0 54px 0;
+}
+
+.popup__input-2 {
+  max-width: 100%;
+  width: 358px;
+  max-height: 100%;
+  height: 28px;
+  margin-bottom: 29px;
+  padding: 10px;
+  box-sizing: border-box; /* Para que los inputs quepan en el contenedor del form */
+  border: 0;
+  border-bottom: 1px solid #c4c4c4;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.popup__input-2:focus {
+  outline: none;
+  border-color: #3498db; /* Borde azul al enfocar el campo */
+}
+
+.popup__createButton {
+  text-align: center;
+  width: 358px;
+  height: 50px;
+  margin: 0;
+  border: 1px solid #c4c4c4;
+  color: #ffffff;
+  background-color: #000000;
+  font-size: 18px;
+  border-radius: 4px;
+  margin-top: 19px;
+  cursor: pointer;
+}
+
+.popup__createButton:hover {
+  background-color: #000000cc;
+}
+
+.popup__closeButton-2 {
+  background-color: none;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  position: absolute;
+  top: 146.76px;
+  left: 856px;
+  z-index: 2; /* Asegura que el botón esté por encima de la imagen */
+}
+
+.popup__closeButton-2:hover {
+  opacity: 0.5;
+}
