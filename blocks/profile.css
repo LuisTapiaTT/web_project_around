@@ -105,7 +105,7 @@
   max-width: 24px;
   height: 24px;
   margin: 15px 0 0 18px;
-  z-index: 2; /* Asegura que el botón esté por encima de la imagen */
+  z-index: 0;
 }
 
 .profile__editButton-img {

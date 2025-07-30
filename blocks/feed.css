@@ -73,3 +73,11 @@
 .feed__post-likeButton-active {
   background-image: url(../images/photo__like.png) no-repeat center;
 }
+
+a {
+  width: 100%;
+  max-width: 282px;
+  height: 282px;
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
+}

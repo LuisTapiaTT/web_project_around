@@ -28,7 +28,7 @@ const infoName = document.querySelector(".profile__name");
 
 const infoHobby = document.querySelector(".profile__hobby");
 
-let newPosts = document.querySelector(".feed__newPosts-container");
+let newPosts = document.querySelector(".feed__posts");
 
 // Botón editar perfil/abrir popup.
 
@@ -100,29 +100,45 @@ let initialCards = [
 
 let addedCards = [];
 
-function addPost() {
+function addPost(titleValue, linkValue) {
+  const newCardContainer = document.createElement("div");
+  newCardContainer.classList.add("feed__post-block");
+  const newImageElement = document.createElement("img");
+  newImageElement.classList.add("feed__post-image");
+  const postInfoContainer = document.createElement("div");
+  postInfoContainer.classList.add("feed__post-info");
+  const titleElement = document.createElement("h2");
+  titleElement.classList.add("feed__post-title");
+  titleElement.textContent = titleValue;
+  const likeButtonElement = document.createElement("button");
+  likeButtonElement.classList.add("feed__post-likeButton");
+
+  newPosts.insertAdjacentHTML(
+    "afterbegin",
+    `
+   <div class="feed__post-block">
+               <img
+                 class="feed__post-image"
+                 src="${linkValue}"
+               />
+               <div class="feed__post-info">
+                 <h2 class="feed__post-title">${titleValue}</h2>
+                 <button class="feed__post-likeButton">
+                  <img src="images/like_button.png" alt="botón de like" />
+                </button>
+               </div>
+             </div>`
+  );
+}
+
+postCreateButton.addEventListener("click", function () {
   let titlePost = document.querySelector(".popup__inputTitle");
-  let linkPost = document.querySelector(".popup__inputTitle");
+  let linkPost = document.querySelector(".popup__inputLink");
 
-  // let newCard = [
-  //   `{
-  // name: ${titlePost.value};
-  // link: ${linkPost.value};},`
-  // ];
-
-  // o
-
-  let newCard = {
-    name: titlePost,
-    link: linkPost,
-  };
-
-  addedCards.push(newCard);
-
-  // let updatedPostsList = initialCards.concat(addedCards); Conc de added Cards a initialCards?
+  addPost(titlePost.value, linkPost.value);
 
   titlePost.value = "";
   linkPost.value = "";
-}
 
-postCreateButton.addEventListener("submit", addPost);
+  closePopupWindow2();
+});
