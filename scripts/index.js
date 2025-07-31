@@ -8,8 +8,6 @@ const postCloseButton = document.querySelector(".popup__closeButton-2"); // Bot�
 
 const postCreateButton = document.querySelector(".popup__createButton"); // Bot처n de crear post.
 
-let profileLikeButton = document.querySelector(".feed__post-likeButton"); //Bot처n de like.
-
 const profileAddButton = document.querySelector(".profile__add-button"); //Bot처n de agregar post.
 
 let popupWindow = document.querySelector(".popup"); //Ventana popup.
@@ -27,8 +25,6 @@ const inputLink = document.querySelector("popup__inputLink");
 const infoName = document.querySelector(".profile__name");
 
 const infoHobby = document.querySelector(".profile__hobby");
-
-let newPosts = document.querySelector(".feed__posts");
 
 // Bot처n editar perfil/abrir popup.
 
@@ -71,6 +67,8 @@ profileSaveButton.addEventListener("submit", saveProfileInfo);
 
 // Bot처n crear post.
 
+const newPosts = document.querySelector(".feed__posts");
+
 let initialCards = [
   {
     name: "Portland, Oregon",
@@ -101,34 +99,41 @@ let initialCards = [
 let addedCards = [];
 
 function addPost(titleValue, linkValue) {
-  const newCardContainer = document.createElement("div");
-  newCardContainer.classList.add("feed__post-block");
-  const newImageElement = document.createElement("img");
-  newImageElement.classList.add("feed__post-image");
-  const postInfoContainer = document.createElement("div");
-  postInfoContainer.classList.add("feed__post-info");
-  const titleElement = document.createElement("h2");
-  titleElement.classList.add("feed__post-title");
-  titleElement.textContent = titleValue;
-  const likeButtonElement = document.createElement("button");
-  likeButtonElement.classList.add("feed__post-likeButton");
+  // const newCardContainer = document.createElement("div");
+  // newCardContainer.classList.add("feed__post-block");
+  // const newImageElement = document.createElement("img");
+  // newImageElement.classList.add("feed__post-image");
+  // newImageElement.src = linkValue;
+  // const postInfoContainer = document.createElement("div");
+  // postInfoContainer.classList.add("feed__post-info");
+  // const titleElement = document.createElement("h2");
+  // titleElement.classList.add("feed__post-title");
+  // titleElement.textContent = titleValue;
+  // const likeButtonElement = document.createElement("button");
+  // likeButtonElement.classList.add("feed__post-likeButton");
+  // const likeButtonImageElement = document.createElement("img");
+  // likeButtonImageElement.src = "images/like_button.png";
 
-  newPosts.insertAdjacentHTML(
-    "afterbegin",
-    `
-   <div class="feed__post-block">
-               <img
-                 class="feed__post-image"
-                 src="${linkValue}"
-               />
-               <div class="feed__post-info">
-                 <h2 class="feed__post-title">${titleValue}</h2>
-                 <button class="feed__post-likeButton">
-                  <img src="images/like_button.png" alt="bot처n de like" />
-                </button>
-               </div>
-             </div>`
-  );
+  // likeButtonElement.append(likeButtonImageElement);
+
+  // postInfoContainer.append(titleElement, likeButtonElement);
+
+  // newCardContainer.append(newImageElement, postInfoContainer);
+
+  // newPosts.prepend(newCardContainer);
+
+  const cardTemplate = document.querySelector("#template").content;
+  const postBlockTemplate = cardTemplate
+    .querySelector(".feed__post-block")
+    .cloneNode(true);
+  postBlockTemplate.querySelector(".feed__post-image").src = linkValue;
+  postBlockTemplate.querySelector(".feed__post-info");
+  postBlockTemplate.querySelector(".feed__post-title").textContent = titleValue;
+  postBlockTemplate.querySelector(".feed__post-likeButton");
+  postBlockTemplate.querySelector(".feed__post-likeButtonImage").src =
+    "images/like_button.png";
+
+  newPosts.prepend(cardTemplate);
 }
 
 postCreateButton.addEventListener("click", function () {
@@ -142,3 +147,25 @@ postCreateButton.addEventListener("click", function () {
 
   closePopupWindow2();
 });
+
+// Creaci처n Template
+
+// const cardTemplate = document.querySelector("#template").content;
+// const postBlockTemplate = cardTemplate
+//   .querySelector(".feed__post-block")
+//   .cloneNode(true);
+// postBlockTemplate.querySelector(".feed__post-image").src = linkPost;
+// postBlockTemplate.querySelector(".feed__post-info");
+// postBlockTemplate.querySelector(".feed__post-title").textContent = titlePost;
+// postBlockTemplate.querySelector(".feed__post-likeButton");
+// postBlockTemplate.querySelector(".feed__post-likeButtonImage").src =
+//   "images/like_button.png";
+
+// newPosts.prepend(cardTemplate);
+
+// Reactividad Bot처n de Like.
+const postLikeButton = document.querySelector(".feed__post-likeButton"); //Bot처n de like.
+
+function reactiveLike() {
+  likeButtonImageElement;
+}
