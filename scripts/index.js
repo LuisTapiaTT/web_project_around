@@ -67,8 +67,6 @@ profileSaveButton.addEventListener("submit", saveProfileInfo);
 
 // Botón crear post.
 
-const newPosts = document.querySelector(".feed__posts");
-
 let initialCards = [
   {
     name: "Portland, Oregon",
@@ -96,46 +94,24 @@ let initialCards = [
   },
 ];
 
-let addedCards = [];
-
 function addPost(titleValue, linkValue) {
-  // const newCardContainer = document.createElement("div");
-  // newCardContainer.classList.add("feed__post-block");
-  // const newImageElement = document.createElement("img");
-  // newImageElement.classList.add("feed__post-image");
-  // newImageElement.src = linkValue;
-  // const postInfoContainer = document.createElement("div");
-  // postInfoContainer.classList.add("feed__post-info");
-  // const titleElement = document.createElement("h2");
-  // titleElement.classList.add("feed__post-title");
-  // titleElement.textContent = titleValue;
-  // const likeButtonElement = document.createElement("button");
-  // likeButtonElement.classList.add("feed__post-likeButton");
-  // const likeButtonImageElement = document.createElement("img");
-  // likeButtonImageElement.src = "images/like_button.png";
-
-  // likeButtonElement.append(likeButtonImageElement);
-
-  // postInfoContainer.append(titleElement, likeButtonElement);
-
-  // newCardContainer.append(newImageElement, postInfoContainer);
-
-  // newPosts.prepend(newCardContainer);
-
+  const newPosts = document.querySelector(".feed__posts");
   const cardTemplate = document.querySelector("#template").content;
-  const postBlockTemplate = cardTemplate
-    .querySelector(".feed__post-block")
-    .cloneNode(true);
-  postBlockTemplate.querySelector(".feed__post-image").src = linkValue;
-  postBlockTemplate.querySelector(".feed__post-info");
-  postBlockTemplate.querySelector(".feed__post-title").textContent = titleValue;
-  postBlockTemplate.querySelector(".feed__post-likeButton");
-  postBlockTemplate.querySelector(".feed__post-likeButtonImage").src =
-    "images/like_button.png";
 
-  newPosts.prepend(cardTemplate);
+  cardTemplate
+    .querySelector(".feed__post-image")
+    .setAttribute("src", linkValue);
+  cardTemplate
+    .querySelector(".feed__post-image")
+    .setAttribute("alt", titleValue);
+  cardTemplate.querySelector(".feed__post-title").textContent = titleValue;
+
+  let clone = cardTemplate.cloneNode(true);
+
+  newPosts.prepend(clone);
 }
 
+// Evento de botón Crear.
 postCreateButton.addEventListener("click", function () {
   let titlePost = document.querySelector(".popup__inputTitle");
   let linkPost = document.querySelector(".popup__inputLink");
@@ -148,24 +124,4 @@ postCreateButton.addEventListener("click", function () {
   closePopupWindow2();
 });
 
-// Creación Template
-
-// const cardTemplate = document.querySelector("#template").content;
-// const postBlockTemplate = cardTemplate
-//   .querySelector(".feed__post-block")
-//   .cloneNode(true);
-// postBlockTemplate.querySelector(".feed__post-image").src = linkPost;
-// postBlockTemplate.querySelector(".feed__post-info");
-// postBlockTemplate.querySelector(".feed__post-title").textContent = titlePost;
-// postBlockTemplate.querySelector(".feed__post-likeButton");
-// postBlockTemplate.querySelector(".feed__post-likeButtonImage").src =
-//   "images/like_button.png";
-
-// newPosts.prepend(cardTemplate);
-
 // Reactividad Botón de Like.
-const postLikeButton = document.querySelector(".feed__post-likeButton"); //Botón de like.
-
-function reactiveLike() {
-  likeButtonImageElement;
-}
