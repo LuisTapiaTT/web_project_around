@@ -94,10 +94,10 @@ let initialCards = [
   },
 ];
 
-function addPost(titleValue, linkValue) {
-  const newPosts = document.querySelector(".feed__posts");
-  const cardTemplate = document.querySelector("#template").content;
+const newPosts = document.querySelector(".feed__posts");
+const cardTemplate = document.querySelector("#template").content;
 
+function addPost(titleValue, linkValue) {
   cardTemplate
     .querySelector(".feed__post-image")
     .setAttribute("src", linkValue);
@@ -125,3 +125,10 @@ postCreateButton.addEventListener("click", function () {
 });
 
 // Reactividad Botón de Like.
+let likeButton = document.querySelector(".feed__post-likeButton");
+
+function reactiveLike() {
+  likeButton.classList.toggle("feed__post-likeButton-active");
+}
+
+likeButton.addEventListener("click", reactiveLike);
