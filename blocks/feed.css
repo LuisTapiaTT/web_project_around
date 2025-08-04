@@ -27,6 +27,7 @@
   background-color: white;
   overflow: hidden;
   text-overflow: ellipsis;
+  position: relative;
 }
 
 .feed__post-image {
@@ -90,4 +91,25 @@ a {
   height: 282px;
   border-top-left-radius: 5%;
   border-top-right-radius: 5%;
+}
+
+.feed__post-deleteButton {
+  border: none;
+  outline: none;
+  background-image: url(../images/trash_button.png);
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  width: 21px;
+  height: 21px;
+  background-repeat: no-repeat;
+  padding: 0 15px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  z-index: 2;
+}
+
+.feed__post-deleteButton:hover {
+  opacity: 0.5;
 }

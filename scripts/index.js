@@ -95,20 +95,31 @@ let initialCards = [
 ];
 
 const newPosts = document.querySelector(".feed__posts");
-const cardTemplate = document.querySelector("#template").content;
 
 function addPost(titleValue, linkValue) {
-  cardTemplate
-    .querySelector(".feed__post-image")
-    .setAttribute("src", linkValue);
-  cardTemplate
+  const cardTemplate = document.querySelector("#template").content;
+  const cardElement = cardTemplate
+    .querySelector(".feed__post-block")
+    .cloneNode(true);
+
+  cardElement.querySelector(".feed__post-image").setAttribute("src", linkValue);
+  cardElement
     .querySelector(".feed__post-image")
     .setAttribute("alt", titleValue);
-  cardTemplate.querySelector(".feed__post-title").textContent = titleValue;
+  cardElement.querySelector(".feed__post-title").textContent = titleValue;
 
-  let clone = cardTemplate.cloneNode(true);
+  const deleteButtons = cardElement.querySelector(".feed__post-deleteButton");
+  const likeButtons = cardElement.querySelector(".feed__post-likeButton");
 
-  newPosts.prepend(clone);
+  deleteButtons.addEventListener("click", () => {
+    cardElement.remove();
+  });
+
+  likeButtons.addEventListener("click", () => {
+    likeButtons.classList.toggle("feed__post-likeButton-active");
+  });
+
+  newPosts.prepend(cardElement);
 }
 
 // Evento de botón Crear.
@@ -125,10 +136,23 @@ postCreateButton.addEventListener("click", function () {
 });
 
 // Reactividad Botón de Like.
-let likeButton = document.querySelector(".feed__post-likeButton");
+const likeButtons = document.querySelectorAll(".feed__post-likeButton");
 
 function reactiveLike() {
-  likeButton.classList.toggle("feed__post-likeButton-active");
+  this.classList.toggle("feed__post-likeButton-active");
 }
 
-likeButton.addEventListener("click", reactiveLike);
+for (let i = 0; i < likeButtons.length; i++) {
+  likeButtons[i].addEventListener("click", reactiveLike);
+}
+
+// Reactividad botón eliminar post.
+const deleteButtons = document.querySelectorAll(".feed__post-deleteButton");
+
+function reactiveDelete() {
+  this.closest(".feed__post-block").remove();
+}
+
+for (let i = 0; i < deleteButtons.length; i++) {
+  deleteButtons[i].addEventListener("click", reactiveDelete);
+}
