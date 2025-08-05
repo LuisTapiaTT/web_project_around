@@ -201,3 +201,48 @@
 .popup__closeButton-2:hover {
   opacity: 0.5;
 }
+
+/* ------------------------------- Tercer Popup -----------------------------*/
+
+.popup__extendedImgContainer {
+  display: none;
+}
+
+.popup__extendedImg-overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Opacidad inicial */
+  transition: background-color 0.3s ease; /* Animación suave */
+  position: fixed; /* Asegura que el overlay cubra toda la pantalla */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.popup_extendedImg-opened {
+  display: contents;
+}
+
+.popup__extendedImg-img {
+  width: 75vw;
+  height: 75vh;
+}
+
+.popup__extendedImg-closeButton {
+  background-color: none;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  position: absolute;
+  top: 146.76px;
+  left: 856px;
+  z-index: 2; /* Asegura que el botón esté por encima de la imagen */
+}
+
+.popup__extendedImg-closeButton:hover {
+  opacity: 0.5;
+}
+
+.popup__extendedImg-text {
+}

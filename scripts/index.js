@@ -10,7 +10,7 @@ const postCreateButton = document.querySelector(".popup__createButton"); // Bot√
 
 const profileAddButton = document.querySelector(".profile__add-button"); //Bot√≥n de agregar post.
 
-let popupWindow = document.querySelector(".popup"); //Ventana popup.
+const popupWindow = document.querySelector(".popup"); //Ventana popup.
 
 const popupWindow2 = document.querySelector(".popup-2"); //Ventana popup-2
 
@@ -156,3 +156,5 @@ function reactiveDelete() {
 for (let i = 0; i < deleteButtons.length; i++) {
   deleteButtons[i].addEventListener("click", reactiveDelete);
 }
+
+// Popup Imagen Ampliada
