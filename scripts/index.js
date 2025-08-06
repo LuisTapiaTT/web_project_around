@@ -67,33 +67,6 @@ profileSaveButton.addEventListener("submit", saveProfileInfo);
 
 // Botón crear post.
 
-let initialCards = [
-  {
-    name: "Portland, Oregon",
-    link: "./images/Portland_Oregon.jpg",
-  },
-  {
-    name: "Seattle, Washington",
-    link: "./images/Seattle_Washington.jpg",
-  },
-  {
-    name: "Charleston, South Carolina",
-    link: "./images/Charleston_SouthCarolina.jpg",
-  },
-  {
-    name: "Minneapolis, Minnesota",
-    link: "./images/Minneapolis_Minnesota.jpg",
-  },
-  {
-    name: "Savannah, Georgia",
-    link: "./images/Savannah_Georgia.jpg",
-  },
-  {
-    name: "Telluride, Colorado",
-    link: "./images/Telluride_Colorado.jpg",
-  },
-];
-
 const newPosts = document.querySelector(".feed__posts");
 
 function addPost(titleValue, linkValue) {
@@ -120,6 +93,44 @@ function addPost(titleValue, linkValue) {
   });
 
   newPosts.prepend(cardElement);
+
+  function addToArray(newCardName, newCardLink) {
+    let initialCards = [
+      {
+        name: "Portland, Oregon",
+        link: "./images/Portland_Oregon.jpg",
+      },
+      {
+        name: "Seattle, Washington",
+        link: "./images/Seattle_Washington.jpg",
+      },
+      {
+        name: "Charleston, South Carolina",
+        link: "./images/Charleston_SouthCarolina.jpg",
+      },
+      {
+        name: "Minneapolis, Minnesota",
+        link: "./images/Minneapolis_Minnesota.jpg",
+      },
+      {
+        name: "Savannah, Georgia",
+        link: "./images/Savannah_Georgia.jpg",
+      },
+      {
+        name: "Telluride, Colorado",
+        link: "./images/Telluride_Colorado.jpg",
+      },
+      {
+        name: newCardName,
+        link: newCardLink,
+      },
+    ];
+
+    return initialCards;
+  }
+
+  let newCardArray = addToArray(titleValue, linkValue);
+  console.log(newCardArray);
 }
 
 // Evento de botón Crear.
@@ -170,6 +181,7 @@ function openImgPopup(imageSrc, altText) {
   popupImg.alt = altText;
   popupImgText.textContent = altText;
   popupImgContainer.classList.add("popup__ImgContainerOpened");
+  console.log("Hola, mundo");
 }
 
 cardImg.forEach((card) => {
