@@ -181,7 +181,7 @@ function openImgPopup(imageSrc, altText) {
   popupImg.alt = altText;
   popupImgText.textContent = altText;
   popupImgContainer.classList.add("popup__ImgContainerOpened");
-  console.log("Hola, mundo");
+  console.log("Verificador de click");
 }
 
 cardImg.forEach((card) => {
