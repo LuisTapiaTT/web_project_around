@@ -204,45 +204,87 @@
 
 /* ------------------------------- Tercer Popup -----------------------------*/
 
-.popup__extendedImgContainer {
-  display: none;
-}
-
-.popup__extendedImg-overlay {
-  background-color: rgba(0, 0, 0, 0.5); /* Opacidad inicial */
-  transition: background-color 0.3s ease; /* Animación suave */
-  position: fixed; /* Asegura que el overlay cubra toda la pantalla */
+.popup__ImgContainer {
+  display: content;
+  width: 370px;
+  background-color: #0000004b;
   top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
 }
 
-.popup_extendedImg-opened {
-  display: contents;
+.popup__ImgContainerOpened {
+  display: flex;
 }
 
-.popup__extendedImg-img {
-  width: 75vw;
-  height: 75vh;
+.popup__box {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: fit-content;
+  height: 100%;
+  background-color: green;
+  position: absolute;
+  top: 75px;
+  left: 162px; */
+  border-radius: 20px;
+  background-color: rgb(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease; /* Animación suave */
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 90%;
+  max-width: 75vw;
+  box-sizing: border-box;
+  position: fixed;
+  top: 75px;
+  left: 162px;
 }
 
-.popup__extendedImg-closeButton {
-  background-color: none;
+.popup__Img {
+  width: 100%;
+  height: auto;
+  max-width: 75vw;
+  max-height: 75vh;
+  margin: auto;
+}
+
+.popup__ImgCloseButton {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../images/CloseIcon.png);
   border: none;
   cursor: pointer;
   width: 40px;
   height: 40px;
   padding: 0;
   position: absolute;
-  top: 146.76px;
-  left: 856px;
+  top: -50px;
+  right: 0px;
   z-index: 2; /* Asegura que el botón esté por encima de la imagen */
 }
 
-.popup__extendedImg-closeButton:hover {
+.popup__ImgCloseButton:hover {
   opacity: 0.5;
 }
 
-.popup__extendedImg-text {
+.popup__ImgText {
+  position: absolute;
+  bottom: -25px;
+  left: 10px;
+  margin: 0;
+  /* border: 1px solid #ffffff; */
+  height: 12px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ffffff;
 }

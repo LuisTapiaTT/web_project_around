@@ -28,6 +28,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   position: relative;
+  cursor: pointer;
 }
 
 .feed__post-image {
@@ -107,7 +108,7 @@ a {
   border: none;
   cursor: pointer;
   background-color: transparent;
-  z-index: 2;
+  z-index: 0;
 }
 
 .feed__post-deleteButton:hover {

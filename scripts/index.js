@@ -158,3 +158,45 @@ for (let i = 0; i < deleteButtons.length; i++) {
 }
 
 // Popup Imagen Ampliada
+
+const popupImgContainer = document.querySelector(".popup__ImgContainer");
+const popupImg = document.querySelector(".popup__Img");
+const popupImgCloseButton = document.querySelector(".popup__ImgCloseButton");
+const popupImgText = document.querySelector(".popup__ImgText");
+const cardContainer = document.querySelectorAll(".feed__post-block");
+
+function openImgPopup(imageSrc, altText) {
+  popupImg.src = imageSrc;
+  popupImg.alt = altText;
+  popupImgText.textContent = altText;
+  popupImgContainer.classList.add(".popup__ImgContainerOpened");
+}
+
+// cardContainer.forEach((card) => {
+//   card.addEventListener("click", function (event) {
+//     if (event.target.classList.contains(".feed__post-image")) {
+//       const img = event.target;
+//       openImgPopup(img.src, img.alt);
+//       console.log("Hola, Mundo");
+//     }
+//   });
+// });
+
+function holaMUNDO() {
+  popupImgContainer.classList.add(".popup__ImgContainerOpened");
+  console.log("Hola, mundo");
+}
+
+for (let i = 0; i < cardContainer.length; i++) {
+  cardContainer[i].addEventListener("click", holaMUNDO);
+}
+
+// popupImgCloseButton.addEventListener("click", () => {
+//   popupWindow3.classList.remove(".popup__ImgContainerOpened");
+// });
+
+// function closePopupWindow3() {
+//   popupWindow3.classList.remove(".popup__ImgContainerOpened");
+// }
+
+// popupImgCloseButton.addEventListener("click", closePopupWindow3);
