@@ -28,7 +28,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
   position: relative;
-  cursor: pointer;
 }
 
 .feed__post-image {
@@ -37,6 +36,7 @@
   height: 282px;
   border-top-left-radius: 5%;
   border-top-right-radius: 5%;
+  cursor: pointer;
 }
 
 .feed__post-info {

@@ -205,20 +205,18 @@
 /* ------------------------------- Tercer Popup -----------------------------*/
 
 .popup__ImgContainer {
-  display: content;
-  width: 370px;
-  background-color: #0000004b;
+  display: none;
+  background-color: rgb(0, 0, 0, 0.5);
   top: 0;
   width: 100%;
   height: 100%;
-  justify-content: center;
   align-items: center;
   position: fixed;
   z-index: 1;
 }
 
 .popup__ImgContainerOpened {
-  display: flex;
+  display: contents;
 }
 
 .popup__box {
