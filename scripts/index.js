@@ -83,6 +83,7 @@ function addPost(titleValue, linkValue) {
 
   const deleteButtons = cardElement.querySelector(".feed__post-deleteButton");
   const likeButtons = cardElement.querySelector(".feed__post-likeButton");
+  const imgButton = cardElement.querySelector(".feed__post-image");
 
   deleteButtons.addEventListener("click", () => {
     cardElement.remove();
@@ -90,6 +91,13 @@ function addPost(titleValue, linkValue) {
 
   likeButtons.addEventListener("click", () => {
     likeButtons.classList.toggle("feed__post-likeButton-active");
+  });
+
+  imgButton.addEventListener("click", function (event) {
+    if (event.target.classList.contains("feed__post-image")) {
+      const img = event.target;
+      openImgPopup(img.src, img.alt);
+    }
   });
 
   newPosts.prepend(cardElement);
