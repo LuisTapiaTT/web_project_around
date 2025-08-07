@@ -150,6 +150,12 @@
     padding: 67px 100px;
     margin: 0;
   }
+
+  .popup__ImgContainer-box {
+    position: fixed;
+    top: 175px;
+    left: 89px;
+  }
 }
 
 @media screen and (max-width: 320px) {
@@ -518,5 +524,20 @@
 
   .popup__closeButton-2:hover {
     background-color: #000000cc;
+  }
+
+  .popup__ImgContainer-box {
+    position: fixed;
+    top: 150px;
+    left: 35px;
+  }
+
+  .popup__ImgCloseButton {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -35px;
+    right: -32px;
+    z-index: 2; /* Asegura que el botón esté por encima de la imagen */
   }
 }
